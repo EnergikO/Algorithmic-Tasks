@@ -12,6 +12,9 @@ class ListNode:
 
 
 def deleteDuplicates(head):
+	if not head:
+		return None
+
 	temp_answer = [head.val]
 	answer: ListNode
 

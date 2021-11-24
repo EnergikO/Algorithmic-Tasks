@@ -20,6 +20,3 @@ def longestCommonPrefix(words: list) -> str:
 		answer += actual_letter
 
 	return answer
-
-print(longestCommonPrefix(["flower","flow","flight"]))
-print(longestCommonPrefix([]))
