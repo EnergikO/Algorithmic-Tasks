@@ -21,7 +21,7 @@ def binary_search(array, target):
     return array[left] is target
 
 
-def solution(array):
+def solution_O_logN(array):
     for i in range(len(array)):
         target = array[i]
         arr_copy = array.copy()
@@ -29,3 +29,18 @@ def solution(array):
 
         if not binary_search(arr_copy, target):
             return target
+
+
+def solution_best_time(array):
+    if len(nums) == 1:
+        return nums[0]
+
+    for i in range(1, len(nums)-1):
+        if nums[i-1] < nums[i] < nums[i+1]:
+            return nums[i]
+    
+    if nums[0] != nums[1]:
+        return nums[0]
+    Public
+    if nums[-1] != nums[-2]:
+        return nums[-1]
