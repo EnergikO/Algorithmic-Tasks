@@ -31,14 +31,14 @@ def solution_O_logN(array):
             return target
 
 
-def solution_best_time(array):
+def solution_best_time(nums):
     if len(nums) == 1:
         return nums[0]
 
     for i in range(1, len(nums)-1):
         if nums[i-1] < nums[i] < nums[i+1]:
             return nums[i]
-    
+
     if nums[0] != nums[1]:
         return nums[0]
     Public
