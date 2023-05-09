@@ -1,17 +1,18 @@
 def longest_happy_prefix(string: str) -> str:
     answer = ""
 
-    i = 1
     n = len(string)
+    i = n - 1
 
-    while i != n:
+    while i != 0:
         prefix = string[:i:]
         suffix = string[n - i::]
 
         if prefix == suffix:
             answer = prefix
+            break
 
-        i += 1
+        i -= 1
 
     return answer
 
